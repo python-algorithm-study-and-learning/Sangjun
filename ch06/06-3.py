@@ -4,6 +4,7 @@ class Solution:
         num_logs = []
 
         # 문자로그와 숫자로그를 분리하기
+        # 8 / art
         for log in logs:
             if log.split(' ')[1].isalpha():
                 alpha_logs.append(log)

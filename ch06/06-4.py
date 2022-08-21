@@ -1,7 +1,6 @@
 class Solution:
     def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
         convert_paragraph = re.sub(r"[^a-z]+", ' ', paragraph.lower()).split()
-        print(convert_paragraph)
 
         common_word_dict = dict()
         filter_banned_array = [i for i in convert_paragraph

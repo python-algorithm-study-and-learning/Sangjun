@@ -5,7 +5,7 @@ class Solution:
             str_sets.add(''.join(sorted(list(val))))
 
         strs_list = list(str_sets)
-        answer = [[] for i in range(len(strs_list))]
+        answer = [[] for _ in range(len(strs_list))]
 
         for val in strs:
             answer[strs_list.index(''.join(sorted(list(val))))].append(val)
