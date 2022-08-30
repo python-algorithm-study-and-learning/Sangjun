@@ -15,3 +15,5 @@ class Solution:
         val_arr.append(current_pointer.val)
         
         return val_arr == val_arr[::-1]
+    
+    
