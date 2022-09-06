@@ -15,3 +15,4 @@ class Solution:
       answer_to = sorted_nums[to_idx][0]
       
       return [answer_from, answer_to]
+    
