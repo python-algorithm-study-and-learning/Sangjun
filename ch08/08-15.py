@@ -8,4 +8,5 @@ class Solution:
         answer_cur = None
         while head:
             answer_cur, answer_cur.next, head = head, answer_cur, head.next
+        
         return answer_cur

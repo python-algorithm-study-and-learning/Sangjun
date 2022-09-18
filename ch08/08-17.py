@@ -5,14 +5,16 @@
 #         self.next = next
 class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        
         if head == None:
             return head
+        
         first = head
         second = None
         if head.next:
             second = head.next 
         
-        if second == None or head == None:
+        if second == None:
             return head
         
         while first.next.next and second.next.next:
@@ -23,3 +25,4 @@ class Solution:
         first.val, second.val = second.val, first.val
             
         return head
+    

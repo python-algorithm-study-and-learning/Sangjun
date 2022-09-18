@@ -18,16 +18,15 @@ class Solution:
         l1_list.reverse()
         l2_list.reverse()
         
-        sum = int(''.join(map(str,l1_list))) + int(''.join(map(str,l2_list)))
+        add_two_number_sum = (''.join(map(str,l1_list))) + int(''.join(map(str,l2_intlist)))
         
-        if sum == 0:
+        if add_two_number_sum == 0:
             return answer
-    
         
-        while sum: 
-            addr = sum % 10
+        while add_two_number_sum: 
+            addr = add_two_number_sum % 10
             answer_cur.next = ListNode(addr)
             answer_cur = answer_cur.next
-            sum = sum // 10
+            add_two_number_sum = add_two_number_sum // 10
         
         return answer.next
