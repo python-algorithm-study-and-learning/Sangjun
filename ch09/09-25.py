@@ -1,6 +1,6 @@
 class MyCircularQueue:
     def __init__(self, k: int):
-        self.queue = [None] * k
+        self.queue = [None] * k 
         self.length = k
         self.rear_idx = k - 1
         self.front_idx = 0

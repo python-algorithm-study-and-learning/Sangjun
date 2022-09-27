@@ -5,7 +5,9 @@ class Solution:
             "{": "}", 
             "[": "]",
         }
+        
         stack = [None]
+    
         
         for char in s:
             last = stack[-1]
@@ -16,8 +18,7 @@ class Solution:
                     stack.append(char)
             except KeyError:
                 return False
-                
-        print(stack)
+            
         if len(stack) == 1 and stack[0] == None:
             return True
         return False

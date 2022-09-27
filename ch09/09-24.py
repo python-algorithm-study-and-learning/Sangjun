@@ -7,18 +7,28 @@ class MyQueue:
         self.stack_1.append(x)
     
     def pop(self) -> int:
-        while len(self.stack_1):
+        while self.stack_1:
             self.stack_2.append(self.stack_1.pop())
         
-        ans = self.stack_2.pop()
+        ans = self.stack_2.pop()       
         
-        while len(self.stack_2): 
+        while self.stack_2: 
             self.stack_1.append(self.stack_2.pop())
         
         return ans
         
     def peek(self) -> int:
-        return self.stack_1[0]
+        
+        while self.stack_1:
+            self.stack_2.append(self.stack_1.pop())
+        
+        ans = self.stack_2[-1]    
+        
+        while self.stack_2: 
+            self.stack_1.append(self.stack_2.pop())
+        
+        return ans
+    
 
     def empty(self) -> bool:
         return len(self.stack_1) == 0
