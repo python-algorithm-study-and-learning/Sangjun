@@ -10,7 +10,7 @@ class MyCircularDeque:
         node.right = new
         new.left, new.right = node, n
         n.left = new
-        
+    
     def _del(self, node: ListNode):
         n = node.right.right
         node.right = n
