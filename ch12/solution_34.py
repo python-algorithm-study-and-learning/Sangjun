@@ -1,3 +1,4 @@
+# 풀이 1
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         results = []
@@ -19,3 +20,9 @@ class Solution:
                 
         dfs(nums)
         return results
+    
+
+# 풀이 2
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        return list(itertools.permutations(nums))
