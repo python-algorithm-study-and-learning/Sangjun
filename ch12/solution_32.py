@@ -21,3 +21,5 @@ def numIslands(self, grid: List[List[str]]) -> int:
                 dfs(i, j)
                 # 모든 육지 탐색 후 카운트 1 증가 
                 count += 1
+                
+    return count

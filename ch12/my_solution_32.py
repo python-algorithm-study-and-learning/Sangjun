@@ -5,8 +5,6 @@ class Solution:
         land_arr = []
         lands = []
         answer = 0
-        row_len = len(grid)
-        col_len = len(grid[0])
         next_point = [[1, 0], [-1, 0], [0, 1], [0, -1]]
         
         for idx1, row in enumerate(grid):
