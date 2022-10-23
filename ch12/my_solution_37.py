@@ -4,10 +4,10 @@ class Solution:
         
         def dfs(current, prev):
             if len(current) == 0:
-                answer.append(prev[:])
+                answer.append(prev)
             else:
                 dfs(current[1:], prev[:])
-                dfs(current[1:], prev[:] + [current[0]])
+                dfs(current[1:], prev + [current[0]])
                 
         dfs(nums, [])
         return answer

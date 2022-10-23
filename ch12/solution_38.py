@@ -45,6 +45,9 @@ class Solution:
             graph[a].append(b)
             
         route, stack = [], ["JFK"]
+        
+        # ["KUL", "JFK", "NRT", "JFK"]
+    
         while stack:
             # 반복으로 스택을 구성하되 막히는 부분에서 풀어내는 처리 
             while graph[stack[-1]]:
