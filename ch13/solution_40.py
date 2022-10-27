@@ -1,9 +1,12 @@
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         graph = collections.defaultdict(list)
+        
         # 그래프 인접 리스트 구성 
         for u, v, w in times:
             graph[u].append((v, w))
+            
+            # { 1 : [(2, 3), (3, 4)]}
         
         # 큐 변수: [(소요시간, 정점)]
         Q = [(0, k)]
