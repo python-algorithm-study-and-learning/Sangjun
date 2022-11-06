@@ -9,15 +9,11 @@ class Solution:
     
     def longestUnivaluePath(self, root: Optional[TreeNode]) -> int:
         def dfs(node):
-            if node is None:
+            if node is None or (node.left is None and node.right is None): 
                 return
             
             node.len = 0
             cur_max = 0
-            
-            # 리프 노드인 경우
-            if node.left is None and node.right is None: 
-                return
                     
             # 왼쪽 또는 오른쪽이 있는 경우 현재 노드와 값을 비교
             # 같은 숫자인 경우에는 len에 '자식 노드의 len + 1'을 더함
