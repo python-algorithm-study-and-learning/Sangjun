@@ -9,13 +9,10 @@ class Solution:
     
     def bstToGst(self, root: TreeNode) -> TreeNode:
         
-        if root.right:
+        if root:
             self.bstToGst(root.right)
-        
-        self.cur_sum += root.val
-        root.val = self.cur_sum
-        
-        if root.left: 
+            self.cur_sum += root.val
+            root.val = self.cur_sum 
             self.bstToGst(root.left)
             
         return root
